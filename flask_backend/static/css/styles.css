@@ -1,0 +1,413 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0d0d0d;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.example-section {
+    text-align: center;
+    padding: 20px;
+}
+
+
+
+/* Container Styles */
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #230f0f;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(72, 68, 68, 0.4);
+    margin: 0;
+    background: linear-gradient(to right, #141e30, #243b55);
+    color: #e0e0e0;
+}
+
+/* Header Styles */
+h1, h2 {
+    color: #5c5f60;
+    margin-bottom: 20px;
+    font-size: 23px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+p{
+    color: #5c5f60;
+    margin-bottom: 20px;
+    font-size: 23px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    text-align: center;
+
+}
+
+/* Balance Display */
+#balance-display {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #efeddd;
+    font-weight: bold;
+}
+
+/* Battery Styles */
+.battery-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.battery {
+    display: flex;
+    align-items: center;
+    width: 100px;
+    height: 40px;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    position: relative;
+    margin-bottom: 5px;
+}
+
+#battery-level {
+    width: 100%;
+    height: 100%;
+    background-color: #4CAF50; /* Default color */
+    transition: background-color 0.3s, width 0.3s;
+}
+
+.battery-cap {
+    width: 6px;
+    height: 14px;
+    background-color: #fff;
+    position: absolute;
+    right: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 2px;
+}
+
+#battery-level-number {
+    font-size: 16px;
+    color: #e0e0e0;
+}
+
+/* SVG Styles */
+svg {
+    width: 100%;
+    max-width: 300px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-bottom: 200px;
+    border-radius: 50%;
+}
+
+svg:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(234, 246, 5, 0.7);
+}
+
+svg:active {
+    animation: clickAnimation 0.1s ease-out;
+}
+
+@keyframes clickAnimation {
+    0% { transform: scale(1); box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6); }
+    50% { transform: scale(0.9); box-shadow: 0 12px 24px rgba(0, 0, 0, 0.8); }
+    100% { transform: scale(1); box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6); }
+}
+
+/* Timer Styles */
+#timer {
+    font-size: 20px;
+    font-weight: bold;
+    color: #f44336;
+    text-align: center;
+}
+
+/* Task List Styles */
+.task-list {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    max-width: 500px;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s;
+}
+
+.task-item img {
+    margin-right: 10px;
+}
+
+.task-item button {
+    margin-left: auto;
+    background-color: #f0c040;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.task-item button:hover {
+    background-color: #e0b030;
+}
+
+/* Invite List Styles */
+.invite-list {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    max-width: 500px;
+}
+
+.invite-item {
+    background-color: #333;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+}
+
+.invite-item a {
+    color: #f0c040;
+    text-decoration: none;
+    margin-right: auto;
+}
+
+.invite-item a:hover {
+    text-decoration: underline;
+}
+
+/* Connect Wallet Styles */
+.btn {
+    background-color: #f0c040;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+}
+
+.btn:hover {
+    background-color: #e0b030;
+}
+
+.disabled-button {
+    background-color: #999999;
+    cursor: not-allowed;
+}
+
+/* Bottom Navigation Styles */
+.bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #282828;
+    padding: 10px;
+    border-radius: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.nav-item img {
+    width: 30px;
+    height: 30px;
+}
+
+.nav-item:hover {
+    color: #f0c040;
+}
+
+/* SVG Classes */
+.coin-outer {
+    fill: url(#innerGradient);
+    stroke: #333;
+    stroke-width: 2;
+}
+
+.coin-inner {
+    fill: #8464d6;
+    stroke: #333;
+    stroke-width: 2;
+}
+
+.coin-shadow {
+    fill: url(#shadowGradient);
+    stroke: none;
+    opacity: 0.5;
+    transform: translate(3px, 3px);
+}
+
+.highlight {
+    fill: url(#highlightGradient);
+    opacity: 0.5;
+}
+
+.complex-m {
+    fill: none;
+    stroke: url(#mGradient);
+    stroke-width: 5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+/* Plus 10 Animation */
+.plus10 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4em;
+    color: #4caf50;
+    animation: float 0.5s ease-in-out;
+    pointer-events: none;
+}
+
+@keyframes float {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) translateY(0);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translate(-50%, -60%) translateY(-20px);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -100%) translateY(-40px);
+    }
+}
+
+/* Tasks Page */
+#tasks-content {
+    padding: 20px;
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.task-item img {
+    margin-right: 10px;
+}
+
+.task-item button {
+    margin-left: auto;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.task-item button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+/* Add to your CSS file */
+.animate-tap {
+    animation: tapAnimation 0.5s ease-in-out;
+}
+
+@keyframes tapAnimation {
+    from {
+        transform: scale(1);
+        color: #000;
+    }
+    to {
+        transform: scale(1.1);
+        color: #f00;
+    }
+}
+/* Container for the invite section */
+.invite-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Container for the invite section */
+.invite-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Paragraph for invite link label */
+.invite-section p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+/* Input field for the invite link */
+#invite-link {
+    width: 80%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Button to copy the invite link */
+.invite-section button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover state for the copy button */
+.invite-section button:hover {
+    background-color: #0056b3;
+}

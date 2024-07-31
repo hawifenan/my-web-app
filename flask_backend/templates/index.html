@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matecoin</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/styles.css">
+</head>
+    <body>
+    
+  
+    <!-- Home Page -->
+    <div class="container" id="home-content">
+        <h1>Welcome to Matecoin - Tap Your Max and Grow Your Balance</h1>
+        <div id="balance-display">
+            <span id="balance-amount">0</span>
+        </div>
+        <div class="battery-container">
+            <div class="battery">
+                <div class="battery-level" id="battery-level"></div>
+                <div class="battery-cap"></div>
+            </div>
+            <div id="battery-level-number">10000</div>
+        </div>
+        <svg id="click-image" viewBox="0 0 100 100">
+            <defs>
+                <linearGradient id="innerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#b0c4de;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#4682b4;stop-opacity:1" />
+                </linearGradient>
+                <linearGradient id="shadowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#1e1e1e;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#0d0d0d;stop-opacity:1" />
+                </linearGradient>
+                <linearGradient id="highlightGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#fff;stop-opacity:0.8" />
+                    <stop offset="100%" style="stop-color:#fff;stop-opacity:0" />
+                </linearGradient>
+                <linearGradient id="mGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#00bcd4;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#0097a7;stop-opacity:1" />
+                </linearGradient>
+            </defs>
+            <circle cx="50" cy="50" r="45" class="coin-outer"/>
+            <circle cx="50" cy="50" r="35" class="coin-inner"/>
+            <circle cx="50" cy="50" r="40" class="coin-shadow"/>
+            <path d="M50,20 L50,80 M30,30 L70,30 M30,70 L70,70 M50,20 L30,50 L50,80 M50,20 L70,50 L50,80" class="complex-m"/>
+            <circle cx="50" cy="35" r="30" class="highlight"/>
+        </svg>
+    </div>
+
+   <!-- Tasks Page -->
+<div class="container" id="tasks-content" style="display: none;">
+    <h1>Complete Tasks</h1>
+    <ul class="task-list">
+        <li class="task-item">
+            <img src="https://img.icons8.com/ios/50/ffffff/twitter.png" alt="Twitter">
+            <span>Follow us on X (Twitter)</span>
+            <button id="task-follow-twitter-btn" class="task-button" data-task-id="follow-twitter">Start</button>
+        </li>
+        <li class="task-item">
+            <img src="https://img.icons8.com/ios/50/ffffff/youtube-play.png" alt="YouTube">
+            <span>Subscribe to our YouTube Channel</span>
+            <button id="task-subscribe-yt-btn" class="task-button" data-task-id="subscribe-yt">Start</button>
+        </li>
+        <li class="task-item">
+            <img src="https://img.icons8.com/ios/50/ffffff/telegram.png" alt="Telegram">
+            <span>Join Our Official Telegram</span>
+            <button id="task-join-telegram-btn" class="task-button" data-task-id="join-telegram">Start</button>
+        </li>
+    </ul>
+    <h1>More Tasks Coming Soon...</h1>
+</div>
+
+
+   <!-- Invite Page -->
+<div id="invite-content" class="container" style="display: none;">
+    <h1>Invite Friends</h1>
+    <p>Invite your friends to join and earn 500 coins for each friend who joins using your link!</p>
+    <div class="invite-section">
+        <span style="color: #5c5f60;
+        margin-bottom: 20px;
+        font-size: 23px;
+        text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        text-align: center;">Your invite link:</span>
+        <input type="text" id="invite-link" readonly />
+        <button onclick="copyInviteLink()">Copy Link</button>
+    </div>
+    <!-- Additional UI elements -->
+</div>
+
+    
+   
+    
+
+    <!-- Connect Wallet Page -->
+    <div class="container" id="wallet-content" style="display: none;">
+        <h1>Connect Wallet</h1>
+        <button id="connect-wallet-button" class="btn disabled-button">Connect Wallet</button>
+        <p>Wallet connection is not available at the moment. Stay tuned!</p>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <div class="bottom-nav">
+        <div class="nav-item" id="home-nav">
+            <img src="https://img.icons8.com/ios/50/ffffff/home.png" alt="Home">
+            <span>Home</span>
+        </div>
+        <div class="nav-item" id="tasks-nav">
+            <img src="https://img.icons8.com/ios/50/ffffff/task.png" alt="Tasks">
+            <span>Tasks</span>
+        </div>
+        <div class="nav-item" id="invite-nav">
+            <img src="https://img.icons8.com/ios/50/ffffff/invite.png" alt="Invite">
+            <span>Invite</span>
+        </div>
+        <div class="nav-item" id="wallet-nav">
+            <img src="https://img.icons8.com/ios/50/ffffff/wallet.png" alt="Wallet">
+            <span>Wallet</span>
+        </div>
+    </div>
+    <script src="../static/js/script.js"></script>
+    </body>
+    </html>
